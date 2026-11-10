@@ -3,16 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Launchpad | globe Entertainment</title>
-<meta name="description" content="Launchpad の開発日誌ページです。現在準備中です。">
+<title>Launchpad 開発日誌 | globe Entertainment</title>
+<meta name="description" content="「考える前に始められる。」起業の最初の一歩を支えるサービス Launchpad の開発日誌です。現在は検証中で、一般公開はしていません。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23FFCF3F'/%3E%3Cpath d='M10 54h14V40h14V26h16' stroke='%231a1a1a' stroke-width='7' fill='none'/%3E%3C/svg%3E">
+<meta property="og:title" content="Launchpad 開発日誌">
+<meta property="og:description" content="「考える前に始められる。」起業の最初の一歩を支えるサービスの開発記録です。">
+<meta property="og:type" content="website">
+<style>
+  :root{ --yellow:#FFCF3F; --ink:#1a1a1a; --paper:#FFFDF5; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif; line-height:1.8; }
+  .band{ background:var(--yellow); border-bottom:4px solid var(--ink); }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 20px; }
+  header.site{ padding:28px 0 20px; }
+  .logo{ display:flex; align-items:center; gap:12px; }
+  .logo svg{ flex:none; }
+  .logo .name{ font-size:30px; font-weight:800; letter-spacing:.02em; line-height:1.1; }
+  .logo .sub{ font-size:14px; font-weight:700; }
+  .concept{ font-size:20px; font-weight:800; margin:14px 0 4px; }
+  .notice{ border:3px solid var(--ink); background:#fff; padding:10px 14px; font-weight:700; margin:18px 0; }
+  h2{ font-size:20px; border-left:10px solid var(--yellow); padding-left:10px; margin:34px 0 12px; }
+  h3{ font-size:17px; margin:22px 0 8px; }
+  p{ margin:8px 0; }
+  article{ background:#fff; border:3px solid var(--ink); padding:20px 22px; margin:18px 0 30px; }
+  article .date{ font-size:13px; font-weight:700; }
+  article h2{ border:none; padding:0; margin:6px 0 12px; font-size:22px; }
+  .facts{ background:#fff; border:3px solid var(--ink); padding:6px 22px 14px; }
+  .facts dt{ font-weight:800; margin-top:12px; }
+  .facts dd{ margin:2px 0 0; }
+  footer{ border-top:4px solid var(--ink); margin-top:40px; padding:16px 0 30px; font-size:14px; }
+</style>
 </head>
 <body>
-<main>
-  <h1>Launchpad</h1>
-  <p>開発日誌は準備中です。</p>
+<div class="band">
+  <div class="wrap">
+    <header class="site">
+      <div class="logo">
+        <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#1a1a1a"/><path d="M10 54h14V40h14V26h16" stroke="#FFCF3F" stroke-width="7" fill="none"/></svg>
+        <div>
+          <div class="name">Launchpad</div>
+          <div class="sub">開発日誌</div>
+        </div>
+      </div>
+      <p class="concept">考える前に始められる。</p>
+      <p>起業したいけれど「アイデアが思いつかない」「何から手をつければいいか分からない」という人のために、最初の事業案と、始めるための一式（名前・ロゴ・紹介ページ・料金表・SNS の準備・最初の計画）を用意し、最初の売上まで伴走するサービスを作っています。</p>
+    </header>
+  </div>
+</div>
+
+<div class="wrap">
+  <p class="notice">このサービスは開発中・検証中です。一般公開はしておらず、申し込みも受け付けていません。</p>
+
+  <h2>正確な情報（予定を含む）</h2>
+  <dl class="facts">
+    <dt>いま使えますか</dt>
+    <dd>使えません。検証用の試作品のみが存在し、一般公開の時期は未定です。</dd>
+    <dt>何ができるサービスですか（公開時の予定）</dt>
+    <dd>質問に答えると事業の候補が根拠つきで提示され、選んだ案について名前・ロゴ・紹介ページ・料金表・SNS プロフィール・お披露目投稿・最初の7日間の計画が一式そろいます。有料の伴走では、毎週「次の一手」と実行用の素材が届きます。</dd>
+    <dt>できないこと</dt>
+    <dd>投稿や送信の代行、売上の保証、税務・法務の断定判断はしません。お金（利用者の売上や決済）も取り扱いません。</dd>
+    <dt>料金</dt>
+    <dd>未確定です。検証では月額 ¥1,980 前後を中心に検討していますが、実測を見て決めます。無料でできる範囲と有料の範囲は、公開時に先に表で明示します。</dd>
+    <dt>運営</dt>
+    <dd>globe Entertainment</dd>
+  </dl>
+
+  <h2>日誌</h2>
+
+  <article>
+    <div class="date">2026-11-11</div>
+    <h2>「考える前に始められる」を作っています</h2>
+    <p>Launchpad の開発日誌をはじめます。作る過程で考えたことと、分かったことを正直に記録していきます。</p>
+    <h3>最近いちばん考えたこと：「最初の1円」は前提で全然違う</h3>
+    <p>検証を進める中で、自分たちの甘さに気づきました。すでに SNS の知り合いやお店など「土台」がある人にとって、最初の売上は数日の話です。でも、フォロワーも販路もない、ゼロから始める人にとっては、最初の壁は「作ること」ではなく「誰にも見られていないこと」でした。</p>
+    <p>だからこのサービスでは、始める前の状態を分けて考えることにしました。土台がある人には実行の伴走を、ゼロからの人には「見られる場所を作る」ところからの伴走を。ゼロからの人の最初の売上は、正直に言って数週間単位の話です。短期で売れるような言い方はしません。</p>
+    <h3>もうひとつの工夫：候補は「実在の事業の型」から</h3>
+    <p>事業の候補を AI の思いつきだけで出すと、市場がない案を混ぜてしまいます。そこで最近始めたのが、M&amp;A の仲介サイトに公開されている事業の情報を読み、「何を・誰に・どう集めて・どう稼ぐか」という仕組みの型を集めることです。実際に売上が立っている事業の型を土台に候補を作れば、根拠のある提案ができます。この日誌でも、型の紹介を少しずつ書いていきます（個別の事業の情報そのものは出しません）。</p>
+    <h3>いまの状態</h3>
+    <p>プロトタイプで検証中で、一般公開はしていません。公開の時期や料金は、検証の数字を見てから正直にお知らせします。</p>
+  </article>
+
   <footer>
-    <p>globe Entertainment</p>
+    <p>運営：globe Entertainment</p>
   </footer>
-</main>
+</div>
 </body>
 </html>
