@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Launchpad 開発日誌 | globe Entertainment</title>
 <meta name="description" content="「考える前に始められる。」起業の最初の一歩を支えるサービス Launchpad の開発日誌です。現在は検証中で、一般公開はしていません。">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23FFCF3F'/%3E%3Cpath d='M10 54h14V40h14V26h16' stroke='%231a1a1a' stroke-width='7' fill='none'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23FFCF3F'/%3E%3Cpath d='M10 54h14V40h14V26h16' stroke='%231a1a1a' stroke-width='7' stroke-linejoin='round' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
 <meta property="og:title" content="Launchpad 開発日誌">
 <meta property="og:description" content="「考える前に始められる。」起業の最初の一歩を支えるサービスの開発記録です。">
 <meta property="og:type" content="website">
@@ -13,29 +13,34 @@
 <meta property="og:image" content="https://launchpad.globe-ent.com/ogp.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://launchpad.globe-ent.com/ogp.png">
+<meta name="color-scheme" content="light">
 <style>
-  :root{ --yellow:#FFCF3F; --ink:#1a1a1a; --paper:#FFFDF5; --line:rgba(26,26,26,.14); --shadow:0 1px 3px rgba(26,26,26,.05),0 10px 28px rgba(26,26,26,.05); }
+  :root{ color-scheme:light; --yellow:#FFCF3F; --pink:#FF90E7; --ink:#1a1a1a; --paper:#FFFDF5; --line:rgba(26,26,26,.14); --shadow:0 1px 3px rgba(26,26,26,.05),0 10px 28px rgba(26,26,26,.05); }
   *{ box-sizing:border-box; }
-  body{ margin:0; background:var(--paper); color:var(--ink); font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif; line-height:1.8; }
+  ::selection{ background:var(--yellow); }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif; font-size:16px; line-height:1.9; letter-spacing:.01em; -webkit-font-smoothing:antialiased; }
   .band{ background:var(--yellow); border-bottom:1px solid var(--line); }
-  .wrap{ max-width:760px; margin:0 auto; padding:0 20px; }
-  header.site{ padding:28px 0 20px; }
-  .logo{ display:flex; align-items:center; gap:12px; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 24px; }
+  header.site{ padding:44px 0 36px; }
+  .logo{ display:flex; align-items:center; gap:14px; }
   .logo svg{ flex:none; }
-  .logo .name{ font-size:30px; font-weight:800; letter-spacing:.02em; line-height:1.1; }
-  .logo .sub{ font-size:14px; font-weight:700; }
-  .concept{ font-size:20px; font-weight:800; margin:14px 0 4px; }
-  .notice{ border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); background:#fff; padding:12px 16px; font-weight:700; margin:18px 0; }
-  h2{ font-size:20px; font-weight:800; letter-spacing:.01em; border-left:6px solid var(--yellow); padding-left:10px; margin:34px 0 12px; }
-  h3{ font-size:17px; margin:22px 0 8px; }
+  .logo .name{ font-size:32px; font-weight:800; letter-spacing:.02em; line-height:1.1; }
+  .logo .sub{ font-size:14px; font-weight:700; letter-spacing:.08em; }
+  .concept{ font-size:30px; font-weight:800; line-height:1.45; letter-spacing:.02em; margin:24px 0 12px; }
+  header.site p{ max-width:34em; }
+  .notice{ border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); background:#fff; padding:16px; font-weight:700; margin:24px 0 8px; }
+  h2{ font-size:21px; font-weight:800; line-height:1.45; letter-spacing:.02em; border-left:6px solid var(--yellow); padding-left:12px; margin:48px 0 16px; }
+  h3{ font-size:17px; line-height:1.5; margin:24px 0 8px; }
   p{ margin:8px 0; }
-  article{ background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:22px 24px; margin:18px 0 30px; }
-  article .date{ font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; }
-  article h2{ border:none; padding:0; margin:6px 0 12px; font-size:22px; font-weight:800; letter-spacing:.01em; }
-  .facts{ background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:8px 24px 16px; }
-  .facts dt{ font-weight:800; margin-top:12px; }
+  article{ background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:32px; margin:20px 0 32px; }
+  article .date{ font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; letter-spacing:.06em; }
+  article .date::before{ content:""; display:inline-block; width:8px; height:8px; border-radius:2px; background:var(--pink); margin-right:8px; }
+  article h2{ border:none; padding:0; margin:8px 0 14px; font-size:24px; font-weight:800; line-height:1.45; letter-spacing:.02em; }
+  .facts{ background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:12px 28px 20px; }
+  .facts dt{ font-weight:800; margin-top:14px; }
   .facts dd{ margin:2px 0 0; }
-  footer{ border-top:1px solid var(--line); margin-top:40px; padding:16px 0 30px; font-size:14px; }
+  footer{ border-top:1px solid var(--line); margin-top:48px; padding:16px 0 32px; font-size:14px; }
+  @media (max-width:560px){ .concept{ font-size:25px; } article{ padding:24px 20px; } header.site{ padding:34px 0 28px; } }
 </style>
 </head>
 <body>
@@ -43,13 +48,13 @@
   <div class="wrap">
     <header class="site">
       <div class="logo">
-        <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#1a1a1a"/><path d="M10 54h14V40h14V26h16" stroke="#FFCF3F" stroke-width="7" fill="none"/></svg>
+        <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#1a1a1a"/><path d="M10 54h14V40h14V26h16" stroke="#FFCF3F" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" fill="none"/></svg>
         <div>
           <div class="name">Launchpad</div>
           <div class="sub">開発日誌</div>
         </div>
       </div>
-      <p class="concept">考える前に始められる。</p>
+      <h1 class="concept">考える前に始められる。</h1>
       <p>起業したいけれど「アイデアが思いつかない」「何から手をつければいいか分からない」という人のために、最初の事業案と、始めるための一式（名前・ロゴ・紹介ページ・料金表・SNS の準備・最初の計画）を用意し、最初の売上まで伴走するサービスを作っています。</p>
     </header>
   </div>
